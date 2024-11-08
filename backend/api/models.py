@@ -33,6 +33,7 @@ class Project(models.Model):
     description = models.TextField()
     technologies = models.ManyToManyField(Technology, through="Uses")
     date = models.DateField()
+    completed = models.BooleanField(default=False)
     
 
     def __str__(self):
@@ -49,6 +50,7 @@ class Project(models.Model):
             'type':self.type,
             'description':self.description,
             'date':self.date,
+            'completed':self.completed,
             'technologies':[technology.as_dict() for technology in self.technologies.all()]
         }
         
