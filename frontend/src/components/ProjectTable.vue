@@ -7,6 +7,7 @@
             <th>Project Type</th>
             <th>Project Date</th>
             <th>Project Description</th>
+            <th>Project Completed?</th>
             <th>Actions</th>
          </tr>
       </thead>
@@ -17,6 +18,7 @@
             <td>{{ project.type }}</td>
             <td>{{ project.date }}</td>
             <td>{{ project.description }}</td>
+            <td>{{ project.completed }}</td>
             <td>
                 <button class="btn btn-primary" @click="setEditProject(project)" data-bs-toggle="modal" data-bs-target="#EditProjectModal">
                     Edit
@@ -54,7 +56,14 @@
                 <div>
                     <label for="description" class="form-label">Project Description</label>
                     <textarea v-model="newProject.description" class="form-control" id="description" rows="3"></textarea>
-                </div>  
+                </div>
+                <div>
+                    <label for="completed" class="form-label">Project Completed?</label>
+                    <select v-model="newProject.completed" class="form-control" id="description" rows="3">
+                        <option :value= true >Completed</option>
+                        <option :value= false >Not Completed</option>
+                    </select>
+                </div>     
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>

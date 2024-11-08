@@ -17,7 +17,8 @@ def projects_api(request):
                 name=POST["name"],
                 type=POST["type"],
                 description=POST["description"],
-                date=POST["date"]
+                date=POST["date"],
+                completed=POST["completed"]
             )
             return JsonResponse(project.as_dict(), status=201)
         
@@ -74,6 +75,7 @@ def project_api(request, project_id):
         project.type = PUT["type"]
         project.description = PUT["description"]
         project.date = PUT["date"]
+        project.completed = PUT["completed"]
         project.save()
         return JsonResponse(project.as_dict())
     
