@@ -30,7 +30,7 @@ class Project(models.Model):
     id = models.AutoField(primary_key=True)
     name = models.CharField(max_length=128)
     type = models.CharField(max_length=64)
-    description = models.CharField(max_length=256)
+    description = models.TextField()
     technologies = models.ManyToManyField(Technology, through="Uses")
     date = models.DateField()
     
