@@ -50,7 +50,7 @@
                 </div>
                 <div>
                     <label for="version" class="form-label">Technology Version</label>
-                    <input v-model="newTechnology.version" type="text" class="form-control" id="version" placeholder="Version">
+                    <input v-model="newTechnology.version" type="number" class="form-control" id="version" placeholder="Version">
                 </div> 
             </div>
             <div class="modal-footer">
