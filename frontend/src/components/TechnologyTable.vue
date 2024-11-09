@@ -1,31 +1,33 @@
 <template>
-    <thead>
-        <tr>
-            <th>#</th>
-            <th>Technology Name</th>
-            <th>Technology Type</th>
-            <th>Technology Description</th>
-            <th>Technology Version</th>
-            <th>Actions</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr v-for="(technology, index) in technologies">
-            <th>{{ technology.id }}</th>
-            <td>{{ technology.name }}</td>
-            <td>{{ technology.type }}</td>
-            <td>{{ technology.description }}</td>
-            <td>{{ technology.version }}</td>
-            <td>
-                <button class="btn btn-primary" @click="setEditTechnology(technology)" data-bs-toggle="modal" data-bs-target="#EditTechnologyModal">
-                    Edit
-                </button>
-                <button class="btn btn-danger" @click="$emit('delete-technology', technology)">
-                    Delete
-                </button>
-            </td>
-        </tr>
-    </tbody>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Technology Name</th>
+                <th>Technology Type</th>
+                <th>Technology Description</th>
+                <th>Technology Version</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr v-for="(technology, index) in technologies">
+                <th>{{ technology.id }}</th>
+                <td>{{ technology.name }}</td>
+                <td>{{ technology.type }}</td>
+                <td>{{ technology.description }}</td>
+                <td>{{ technology.version }}</td>
+                <td>
+                    <button class="btn btn-primary" @click="setEditTechnology(technology)" data-bs-toggle="modal" data-bs-target="#EditTechnologyModal">
+                        Edit
+                    </button>
+                    <button class="btn btn-danger" @click="$emit('delete-technology', technology)">
+                        Delete
+                    </button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
 
     <div class="modal fade" id="EditTechnologyModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">

@@ -9,9 +9,11 @@
         @edit-project= "editProject"
         @delete-project="deleteProject"
      />
-    <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#CreateProjectModal">
-        Add a new Project
-    </button>
+    <div class="d-flex justify-content-center">
+        <button class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#CreateProjectModal">
+            Add a new Project
+        </button>
+    </div>
 
     <div class="modal fade" id="CreateProjectModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">

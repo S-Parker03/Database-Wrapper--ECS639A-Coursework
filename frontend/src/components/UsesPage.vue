@@ -11,9 +11,11 @@
         @edit-use= "editUse"
         @delete-use="deleteUse"
      />
-    <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#CreateUseModal">
-        Add a new Uses relationship
-    </button>
+    <div class="d-flex justify-content-center">
+        <button class="btn btn-primary btn-lg mx-auto" data-bs-toggle="modal" data-bs-target="#CreateUseModal">
+            Add a new Uses relationship
+        </button>
+    </div>
 
     <div class="modal fade" id="CreateUseModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">

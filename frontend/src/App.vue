@@ -6,7 +6,7 @@
 </script>
 
 <template>
-    <header class="h2 w-100 m-0 p-0">    
+    <header class="h2 w-100 m-0 p-0" style="background-color:#f3f3f3;">    
         <ul class="nav nav-tabs">
             <li class="nav-item">
                 <button class="nav-link active" id="projects-tab" data-bs-toggle="tab" data-bs-target="#projects-tab-pane" type="button" role="tab" aria-controls="projects-tab-pane" aria-selected="true">Projects</button>
