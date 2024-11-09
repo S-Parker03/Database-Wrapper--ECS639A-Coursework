@@ -26,12 +26,16 @@
             <div class="modal-body">
                 <div>
                     <label for="name" class="form-label">Project ID</label>
-                    <input v-model="newUse.project" type="text" class="form-control" id="name" placeholder="Project ID">
+                    <select v-model="newUse.project" type="" class="form-control" id="name" placeholder="Name">
+                        <option v-for="project in projects" :value="project.id">{{ project.name }}</option>
+                    </select>
                 </div>
                 <div>
                     <label for="type" class="form-label">Technology ID</label>
-                    <input v-model="newUse.technology" type="text" class="form-control" id="type" placeholder="Technology ID">
-                </div>
+                    <select v-model="newUse.technology" type="text" class="form-control" id="type" placeholder="Type">
+                        <option v-for="technology in technologies" :value="technology.id">{{ technology.name }}</option>
+                    </select>
+                </div> 
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>

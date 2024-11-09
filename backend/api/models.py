@@ -7,7 +7,7 @@ class Technology(models.Model):
     name = models.CharField(max_length=128)
     type = models.CharField(max_length=64)
     description = models.TextField()
-    version = models.CharField(max_length=64)
+    version = models.IntegerField()
 
     def __str__(self):
         return str(self.id)
